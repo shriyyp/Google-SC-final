@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-sos-red: #FF3B30;
+  --color-sos-dark-red: #8B0000;
+  --color-sos-yellow: #F59E0B;
+  --color-sos-green: #10B981;
+  --color-sos-blue: #3B82F6;
+  --color-sos-danger: #EF4444;
+  --color-sos-dark: #0A0A0A;
+  --color-sos-card: #1E1E1E;
+  --color-sos-grey: #A0A0A0;
+}
+
+@layer base {
+  body {
+    @apply bg-sos-dark text-white font-sans overflow-hidden;
+  }
+}
+
+.glass {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sos-glow {
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.4);
+}
+
+.medical-glow {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.sos-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255, 59, 48, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

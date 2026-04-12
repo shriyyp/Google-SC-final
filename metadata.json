@@ -1,0 +1,5 @@
+{
+  "name": "Guardian",
+  "description": "Emergency SOS and medical safety app for the Google Solution Challenge 2026.",
+  "requestFramePermissions": ["geolocation", "camera"]
+}
